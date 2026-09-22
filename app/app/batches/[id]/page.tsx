@@ -164,9 +164,12 @@ export default async function BatchDetailPage({
           <ShieldCheck className="size-4 text-success" />
           Anyone can verify this batch with its public verification page.
         </div>
-        <Link href={`/verify/${batch.publicVerificationId}`}>
-          <Button variant="outline">Open public verification page</Button>
-        </Link>
+        <Button
+          render={<Link href={`/verify/${batch.publicVerificationId}`} />}
+          variant="outline"
+        >
+          Open public verification page
+        </Button>
       </div>
     </div>
   )
