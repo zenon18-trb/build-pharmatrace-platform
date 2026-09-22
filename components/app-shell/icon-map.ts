@@ -1,0 +1,32 @@
+import {
+  ArrowLeftRight,
+  Bell,
+  Boxes,
+  Building2,
+  FileText,
+  LayoutDashboard,
+  Link2,
+  Package,
+  Pill,
+  ScrollText,
+  ShieldAlert,
+  ShieldCheck,
+  Truck,
+  type LucideIcon,
+} from 'lucide-react'
+
+export const iconMap: Record<string, LucideIcon> = {
+  LayoutDashboard,
+  Pill,
+  Package,
+  Boxes,
+  Truck,
+  ArrowLeftRight,
+  FileText,
+  Building2,
+  ShieldCheck,
+  Link2,
+  ShieldAlert,
+  Bell,
+  ScrollText,
+}
