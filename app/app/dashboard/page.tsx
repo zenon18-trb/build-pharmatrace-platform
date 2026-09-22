@@ -74,15 +74,13 @@ export default function DashboardPage() {
         title={`Welcome back, ${user.name.split(' ')[0]}`}
         description={`${roleLabels[role]} · ${user.organizationName}`}
         action={
-          role === 'MANUFACTURER' ? (
-            <Link href="/app/batches/new">
-              <Button>Create batch</Button>
-            </Link>
-          ) : (
-            <Link href="/app/verification">
-              <Button variant="outline">Verify a batch</Button>
-            </Link>
-          )
+  role === 'MANUFACTURER' ? (
+              <Button render={<Link href="/app/batches/new" />}>Create batch</Button>
+            ) : (
+              <Button render={<Link href="/app/verification" />} variant="outline">
+                Verify a batch
+              </Button>
+            )
         }
       />
 
