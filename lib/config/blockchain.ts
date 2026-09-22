@@ -1,0 +1,6 @@
+export const BLOCKCHAIN_CHAIN_ID = 80002
+export const BLOCKCHAIN_NETWORK_LABEL = 'Polygon Amoy'
+
+export const contractAddress =
+  process.env.NEXT_PUBLIC_BLOCKCHAIN_CONTRACT_ADDRESS ??
+  '0x0000000000000000000000000000000000000000'
