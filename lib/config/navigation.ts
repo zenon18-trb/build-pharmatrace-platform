@@ -99,3 +99,11 @@ export const demoUsers: Record<Role, DemoUser> = {
 export function navForRole(role: Role): NavItem[] {
   return navItems.filter((item) => item.roles.includes(role))
 }
+
+// Maps the active demo role to the organization it represents.
+export const roleOrgId: Record<Role, string> = {
+  MANUFACTURER: 'org-mfr',
+  DISTRIBUTOR: 'org-dist',
+  RETAILER: 'org-ret',
+  ADMIN: 'org-reg',
+}

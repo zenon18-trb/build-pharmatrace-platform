@@ -6,6 +6,7 @@ import type {
   Medicine,
   Organization,
   Shipment,
+  Transfer,
   VerificationResult,
 } from './types'
 
@@ -362,6 +363,36 @@ export const shipments: Shipment[] = [
   },
 ]
 
+export const transfers: Transfer[] = [
+  {
+    id: 'xfer-1',
+    batchId: 'batch-1',
+    fromOrgId: 'org-mfr',
+    toOrgId: 'org-dist',
+    quantity: 10000,
+    status: 'CONFIRMED',
+    createdAt: '2026-09-23T08:30:00Z',
+  },
+  {
+    id: 'xfer-2',
+    batchId: 'batch-1',
+    fromOrgId: 'org-dist',
+    toOrgId: 'org-ret',
+    quantity: 10000,
+    status: 'CONFIRMED',
+    createdAt: '2026-09-25T09:00:00Z',
+  },
+  {
+    id: 'xfer-3',
+    batchId: 'batch-2',
+    fromOrgId: 'org-mfr',
+    toOrgId: 'org-dist',
+    quantity: 5000,
+    status: 'PENDING',
+    createdAt: '2026-09-20T08:00:00Z',
+  },
+]
+
 export const invoices: Invoice[] = [
   {
     id: 'inv-1',
@@ -480,6 +511,14 @@ export function getMedicine(id: string) {
 
 export function getBatch(id: string) {
   return batches.find((b) => b.id === id)
+}
+
+export function getShipment(id: string) {
+  return shipments.find((s) => s.id === id)
+}
+
+export function getInvoice(id: string) {
+  return invoices.find((i) => i.id === id)
 }
 
 export function getBatchByPublicId(publicId: string) {
