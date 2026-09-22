@@ -70,17 +70,13 @@ export default function LandingPage() {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Link href="/login">
-              <Button variant="ghost" className="h-9 px-3">
-                Sign in
-              </Button>
-            </Link>
-            <Link href="/app/dashboard">
-              <Button className="h-9 px-4 text-white">
-                Open app
-                <ArrowRight className="size-4" />
-              </Button>
-            </Link>
+            <Button render={<Link href="/login" />} variant="ghost" className="h-9 px-3">
+              Sign in
+            </Button>
+            <Button render={<Link href="/app/dashboard" />} className="h-9 px-4 text-white">
+              Open app
+              <ArrowRight className="size-4" />
+            </Button>
           </div>
         </div>
       </header>
@@ -103,18 +99,14 @@ export default function LandingPage() {
                 counterfeiters cannot forge.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link href="/app/dashboard">
-                  <Button className="h-11 px-5 text-white">
-                    Explore the platform
-                    <ArrowRight className="size-4" />
-                  </Button>
-                </Link>
-                <a href="#verify">
-                  <Button variant="outline" className="h-11 px-5">
-                    <QrCode className="size-4" />
-                    Verify a medicine
-                  </Button>
-                </a>
+                <Button render={<Link href="/app/dashboard" />} className="h-11 px-5 text-white">
+                  Explore the platform
+                  <ArrowRight className="size-4" />
+                </Button>
+                <Button render={<a href="#verify" />} variant="outline" className="h-11 px-5">
+                  <QrCode className="size-4" />
+                  Verify a medicine
+                </Button>
               </div>
               <dl className="mt-10 grid max-w-md grid-cols-3 gap-6">
                 {[

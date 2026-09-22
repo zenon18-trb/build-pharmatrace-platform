@@ -44,8 +44,13 @@ export function Topbar({ onOpenNav }: { onOpenNav: () => void }) {
         </select>
       </label>
 
-      <Link href="/app/alerts">
-        <Button variant="ghost" size="icon" className="relative" aria-label="Alerts">
+        <Button
+          render={<Link href="/app/alerts" />}
+          variant="ghost"
+          size="icon"
+          className="relative"
+          aria-label="Alerts"
+        >
           <Bell className="size-4" />
           {alertCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex size-4 items-center justify-center rounded-full bg-danger text-[10px] font-semibold text-white">
@@ -53,7 +58,6 @@ export function Topbar({ onOpenNav }: { onOpenNav: () => void }) {
             </span>
           )}
         </Button>
-      </Link>
 
       <ThemeToggle />
 
