@@ -522,8 +522,12 @@ export function getInvoice(id: string) {
 }
 
 export function getBatchByPublicId(publicId: string) {
-  return batches.find((b) => b.publicVerificationId === publicId)
-}
+  return batches.find(
+    (b) =>
+      b.publicVerificationId === publicId ||
+      b.batchNumber.toLowerCase() === publicId.toLowerCase(),
+  )
+  }
 
 export function resolveVerification(publicId: string): VerificationResult {
   const batch = getBatchByPublicId(publicId)
